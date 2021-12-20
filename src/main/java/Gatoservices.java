@@ -7,6 +7,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 import javax.imageio.ImageIO;
 import javax.swing.*;
+
 public class Gatoservices {
 
     public static void verGatos() throws IOException {
@@ -28,7 +29,7 @@ public class Gatoservices {
             if(fondoGato.getIconWidth() > 800){
 
                 Image fondo = fondoGato.getImage();
-                Image modificada = fondo.getScaledInstance(800, 600, java.awt.Image.SCALE_SMOOTH);
+                Image modificada = fondo.getScaledInstance(800, 600, Image.SCALE_SMOOTH);
                 fondoGato = new ImageIcon(modificada);
             }
             String menu = "Opciones: \n"
@@ -41,7 +42,6 @@ public class Gatoservices {
             String opcion = (String) JOptionPane.showInputDialog(null,menu,id_gato, JOptionPane.INFORMATION_MESSAGE, fondoGato, botones,botones[0]);
 
             int seleccion = -1;
-            //validamos que opcion selecciona el usuario
             for(int i=0;i<botones.length;i++){
                 if(opcion.equals(botones[i])){
                     seleccion = i;

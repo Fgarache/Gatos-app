@@ -1,5 +1,3 @@
-import lombok.SneakyThrows;
-
 import javax.swing.*;
 import java.io.IOException;
 
@@ -10,11 +8,9 @@ public class Main {
 
         do{
 
-            //menu
+            //menu principal
             String opcion = (String) JOptionPane.showInputDialog(null, "Gatitos java", "Menu principal", JOptionPane.INFORMATION_MESSAGE,
                     null, botones,botones[0]);
-
-
             for(int i=0;i<botones.length;i++){
                 if(opcion.equals(botones[i])){
                     opcion_menu = i;
